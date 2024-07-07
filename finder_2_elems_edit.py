@@ -18,8 +18,11 @@ class LenError(Exception):
     def __str__(self):
         return self.message
 
+
 # Такие вещи надо выносить в функцию main() удобно по аналогии с другими языками осознавать точку входа в приложение
-list_of_nums = []  # Define list_of_nums outside the try block # Коммент на английском? и зачем он?
+list_of_nums = (
+    []
+)  # Define list_of_nums outside the try block # Коммент на английском? и зачем он?
 
 try:
     # Убери избыточные комментарии и реализуй тестирование в соседнем файле test_problem.py, а в основном файле
@@ -57,7 +60,8 @@ except ValueError:
     print("Некорректный ввод. Ожидалось целое число.")
     sys.exit(1)
 
-# В питоне незачем передавать длинну массива, во всех Enumerable коллекциях реализован метод __len__()
+
+# В питоне незачем передавать длину массива, во всех Enumerable коллекциях реализован метод __len__()
 # Я не помню о чем задача и из именования мне совсем не легче, если это задача на K ближайших элементов, то причем тут 2?
 def find_2_elements(ind: int, len_of_lst: int, lst: list) -> list:
     if len_of_lst <= 2:
